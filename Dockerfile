@@ -1,5 +1,8 @@
 # syntax=docker/dockerfile:1
 
+# Dockerfile is here:
+# https://github.com/Knowledge-Graph-Hub/ubuntu20-dev/blob/main/Dockerfile
+
 #Download base image ubuntu 20.04
 FROM ubuntu:20.04
 
@@ -13,8 +16,5 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Update Ubuntu Software repository
 RUN apt-get update && apt-get install -y software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update && apt-get install -y python3.7 python3-pip
-RUN python3.7 -m pip install pip
-RUN apt-get update && apt-get install -y python3-distutils python3-setuptools
-RUN apt -y purge python3.8
+RUN apt-get -y install build-essential curl wget tmux byobu htop -qyy
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
