@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-# Docker image on dockerhub is justaddcoffee/ubuntu20-dev
+# Docker image on dockerhub is justaddcoffee/ubuntu20-python-3-8-5-dev
 # Dockerfile is here:
 # https://github.com/Knowledge-Graph-Hub/ubuntu20-dev/blob/main/Dockerfile
 
